@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class spher : MonoBehaviour
+{
+    int MoveSpeed = 1;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+       //传错了
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        while (true) {
+            //一次跑的一圈
+            this.transform.Translate(Vector3.forward * Time.deltaTime / 2 * MoveSpeed);
+            this.transform.Translate(Vector3.left * Time.deltaTime * MoveSpeed);
+            this.transform.Translate(Vector3.back * Time.deltaTime * MoveSpeed);
+            this.transform.Translate(Vector3.right * Time.deltaTime * MoveSpeed);
+            this.transform.Translate(Vector3.forward * Time.deltaTime / 2 * MoveSpeed);
+        }
+
+
+    }
+}
